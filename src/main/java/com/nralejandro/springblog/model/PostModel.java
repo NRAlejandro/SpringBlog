@@ -25,10 +25,7 @@ public class PostModel {
     @Column
     private String body;
 
-    @Column
-    private Date timestamp;
-
-
-
+    //@Column
+    //private Date timestamp;
 
 }

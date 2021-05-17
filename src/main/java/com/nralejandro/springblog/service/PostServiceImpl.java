@@ -18,24 +18,24 @@ public class PostServiceImpl implements IPostService{
     @Override
     @Transactional
     public List<PostModel> getPosts() {
-        return iPostDao.getPosts();
+        return iPostDao.findAll();
     }
 
     @Override
     @Transactional
     public PostModel getPostById(long id) {
-        return iPostDao.getPostById(id);
+        return iPostDao.getOne(id);
     }
 
     @Override
     @Transactional
     public void savePost(PostModel post) {
-        iPostDao.savePost(post);
+        iPostDao.save(post);
     }
 
     @Override
     @Transactional
     public void deletePost(PostModel post) {
-        iPostDao.deletePost(post);
+        iPostDao.delete(post);
     }
 }

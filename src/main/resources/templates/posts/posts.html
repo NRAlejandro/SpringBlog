@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/">
 <head>
     <title>Blog</title>
 </head>
 <body>
 <h1>Titulo Random </h1>
 
+<table>
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Title</td>
+            <td>Body</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="post : ${posts}">
+            <td><span th:text="${post.id}"/></td>
+            <td><span th:text="${post.title}"/></td>
+            <td><span th:text="${post.body}"/></td>
+        </tr>
+    </tbody>
+</table>
 
 </body>
 </html>

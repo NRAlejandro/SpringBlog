@@ -1,18 +1,10 @@
 package com.nralejandro.springblog.dao;
 
 import com.nralejandro.springblog.model.PostModel;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-public interface IPostDao {
-
-    public List<PostModel> getPosts();
-
-    public PostModel getPostById(long id);
-
-    public void savePost(PostModel post);
-
-    public void deletePost(PostModel post);
-
+@Repository
+public interface IPostDao extends JpaRepository<PostModel, Long> {
 
 }

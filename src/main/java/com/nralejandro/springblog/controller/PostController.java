@@ -17,14 +17,8 @@ public class PostController {
 
     @GetMapping("/")
     public String showPostIndex (Model model){
-
         model.addAttribute("posts",iPostService.getPosts());
-
-        System.out.println(iPostService.getPosts());
-
         return "/posts/posts.html";
     }
-
-
 
 }
