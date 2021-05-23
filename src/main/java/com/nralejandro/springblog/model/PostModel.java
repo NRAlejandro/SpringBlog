@@ -15,14 +15,14 @@ import java.util.Date;
 public class PostModel {
 
     @Id
-    @Column
+    @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
 
-    @Column
+    @Column(name = "title")
     private String title;
 
-    @Column
+    @Column(name = "body")
     private String body;
 
     //@Column
