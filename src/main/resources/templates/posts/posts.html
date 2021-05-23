@@ -20,9 +20,13 @@
             <td><span th:text="${post.id}"/></td>
             <td><span th:text="${post.title}"/></td>
             <td><span th:text="${post.body}"/></td>
+            <td><a th:href="@{/posts/delete/{id}(id=${post.id})}">Delete</a></td>
+            <td><a th:href="@{/posts/update/{id}(id=${post.id})}">Update</a></td>
         </tr>
     </tbody>
 </table>
+
+<a th:href="@{/posts/create}">Create Post</a>
 
 </body>
 </html>

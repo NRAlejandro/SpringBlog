@@ -38,4 +38,10 @@ public class PostServiceImpl implements IPostService{
     public void deletePost(PostModel post) {
         iPostDao.delete(post);
     }
+
+    @Override
+    @Transactional
+    public void deletePost(long id) {
+        iPostDao.deleteById(id);
+    }
 }

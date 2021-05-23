@@ -13,4 +13,6 @@ public interface IPostService {
     public void savePost(PostModel post);
 
     public void deletePost(PostModel post);
+
+    public void deletePost(long id);
 }
